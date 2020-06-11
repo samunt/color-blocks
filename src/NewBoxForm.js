@@ -14,7 +14,8 @@ class NewBoxForm extends Component {
     }
     handleSubmit(evt) {
         evt.preventDefault()
-        this.props.addBox(this.state)
+        let newBox = {...this.state, id:uuid()}
+        this.props.addBox(newBox)
     }
     render() {
         return (
